@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # We do not need to authenticate token for user registration.
   skip_before_action :authenticate_request, only: [:create]
 
   def create
