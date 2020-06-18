@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
         render json: { error: 'Not Authorized' }, status: 401 unless @current_user
     end
 
-    # Returns the user the payload carries, if exists.
+    # Returns the user with the id the payload carries, if exists.
     def get_user
         @user ||= User.find(decoded_auth_token[:user_id]) if decoded_auth_token
         @user || errors.add(:token, 'Invalid token') && nil
