@@ -1,12 +1,11 @@
 class V1::MorningEntriesController < ApplicationController
     def index
-      @morning_entries = MorningEntry.all
+      @morning_entries = @current_user.morning_entries
       render json: @morning_entries, status: :ok
     end
     
     def create
-      @morning_entry = MorningEntry.new(morning_entry_params)
-      @morning_entry.save
+      @morning_entry = @current_user.morning_entries.build(morning_entry_params)
       render json: @morning_entry, status: :created
     end
   
