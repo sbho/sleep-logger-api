@@ -1,17 +1,17 @@
 class UsersController < ApplicationController
   def index
-    @users = MorningEntry.all
+    @users = User.all
     render json: @users, status: :ok
   end
 
   def create
-    @user = MorningEntry.new(user_params)
+    @user = User.new(user_params)
     @user.save
     render json: @user, status: :created
   end
 
   def show
-    @user = MorningEntry.find(params[:id])
+    @user = User.find(params[:id])
     if @user
       render json: @user, status: :ok
     else
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = MorningEntry.find(params[:id])
+    @user = User.find(params[:id])
     if @user.update(user_params)
       render json: @user, status: :ok
     else
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = MorningEntry.find(params[:id])
+    @user = User.find(params[:id])
     if @user.destroy
       render status: :ok
     else
