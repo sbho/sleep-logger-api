@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :users
   namespace :v1 do
     resources :morning_entries
+    resources :evening_entries
   end
 end

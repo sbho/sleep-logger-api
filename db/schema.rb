@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_19_095839) do
+ActiveRecord::Schema.define(version: 2020_06_19_100613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "evening_entries", force: :cascade do |t|
+    t.integer "caffeine_morning"
+    t.integer "caffeine_afternoon"
+    t.integer "caffeine_evening"
+    t.boolean "nap_morning"
+    t.boolean "nap_afternoon"
+    t.boolean "nap_evening"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_evening_entries_on_user_id"
+  end
 
   create_table "morning_entries", force: :cascade do |t|
     t.datetime "bed_time"
@@ -35,5 +48,6 @@ ActiveRecord::Schema.define(version: 2020_06_19_095839) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "evening_entries", "users"
   add_foreign_key "morning_entries", "users"
 end
