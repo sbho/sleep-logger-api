@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caffeine_morning: 1
+  caffeine_afternoon: 1
+  caffeine_evening: 1
+  nap_morning: false
+  nap_afternoon: false
+  nap_evening: false
+  user: one
+
+two:
+  caffeine_morning: 1
+  caffeine_afternoon: 1
+  caffeine_evening: 1
+  nap_morning: false
+  nap_afternoon: false
+  nap_evening: false
+  user: two
