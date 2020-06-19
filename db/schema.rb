@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_19_093317) do
+ActiveRecord::Schema.define(version: 2020_06_19_095839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "morning_entries", force: :cascade do |t|
-    t.datetime "bedtime"
-    t.datetime "wakeup_time"
+    t.datetime "bed_time"
+    t.datetime "wake_up_time"
     t.integer "ease_of_sleep"
     t.integer "hours_of_sleep"
     t.integer "morning_feeling"
