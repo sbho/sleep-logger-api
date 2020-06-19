@@ -1,16 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  bedtime: 2020-06-19 17:33:17
-  wakeup_time: 2020-06-19 17:33:17
+  bed_time: 2020-06-19 17:58:39
+  wake_up_time: 2020-06-19 17:58:39
   ease_of_sleep: 1
   hours_of_sleep: 1
   morning_feeling: 1
   user: one
 
 two:
-  bedtime: 2020-06-19 17:33:17
-  wakeup_time: 2020-06-19 17:33:17
+  bed_time: 2020-06-19 17:58:39
+  wake_up_time: 2020-06-19 17:58:39
   ease_of_sleep: 1
   hours_of_sleep: 1
   morning_feeling: 1

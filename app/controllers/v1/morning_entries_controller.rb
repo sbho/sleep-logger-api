@@ -5,7 +5,7 @@ class V1::MorningEntriesController < ApplicationController
   end
 
   def create
-    @morning_entry = @current_user.morning_entries.build(morning_entry_params)
+    @morning_entry = @current_user.morning_entries.create!(morning_entry_params)
     render json: @morning_entry, status: :created
   end
 
@@ -37,6 +37,6 @@ class V1::MorningEntriesController < ApplicationController
   end
 
   def morning_entry_params
-    params.require(:morning_entry).permit(:bedtime, :wakeup_time, :ease_of_sleep, :hours_of_sleep, :morning_feeling)
+    params.require(:morning_entry).permit(:bed_time, :wake_up_time, :ease_of_sleep, :hours_of_sleep, :morning_feeling)
   end
 end
