@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :usertips
+  has_many :tips, through: :usertips
   has_many :morning_entries
   has_many :evening_entries
   validates :name, presence: true
