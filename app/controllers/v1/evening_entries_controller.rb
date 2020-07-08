@@ -36,6 +36,12 @@ class V1::EveningEntriesController < ApplicationController
     end
   end
 
+  def e_entry_by_date
+    date =  Date.parse(params[:date])
+    @evening_entry = @current_user.evening_entries.where(updated_at: date.beginning_of_day...date.end_of_day)
+    render json: @evening_entry, status: :ok
+  end
+
   def evening_entry_params
     params.require(:evening_entry).permit(:caffeine_morning, :caffeine_afternoon, :caffeine_evening, :nap_morning,
     :nap_afternoon, :nap_evening)

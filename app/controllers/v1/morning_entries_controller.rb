@@ -36,6 +36,12 @@ class V1::MorningEntriesController < ApplicationController
     end
   end
 
+  def m_entry_by_date
+    date =  Date.parse(params[:date])
+    @morning_entry = @current_user.morning_entries.where(updated_at: date.beginning_of_day...date.end_of_day)
+    render json: @morning_entry, status: :ok
+  end
+
   def morning_entry_params
     params.require(:morning_entry).permit(:bed_time, :wake_up_time, :ease_of_sleep, :hours_of_sleep, :morning_feeling)
   end

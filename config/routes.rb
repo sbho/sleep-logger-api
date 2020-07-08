@@ -11,5 +11,8 @@ Rails.application.routes.draw do
     get 'get_tips', to: 'get_tips#get_tips'
     post 'save_tip', to: 'tips#save_tip'
     post 'remove_tip', to: 'tips#remove_tip'
+    get 'graphing', to: 'graphing#graphing'
+    get 'm_entry_by_date', to: 'morning_entries#m_entry_by_date'
+    get 'e_entry_by_date', to: 'evening_entries#e_entry_by_date'
   end
 end

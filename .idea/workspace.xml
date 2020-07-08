@@ -24,8 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378e9a3d-4478-4d22-8ce4-da9957314645" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/tips_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/tips_controller.rb" afterDir="false" />
+    <list default="true" id="a9155593-4432-4159-aacd-e32cf7a82ddd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/controllers/v1/graphing_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/graphing_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,12 +88,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="378e9a3d-4478-4d22-8ce4-da9957314645" name="Default Changelist" comment="" />
+      <changelist id="a9155593-4432-4159-aacd-e32cf7a82ddd" name="Default Changelist" comment="" />
       <created>1594173285646</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594173285646</updated>
       <workItem from="1594173292478" duration="1116000" />
+      <workItem from="1594525439730" duration="13856000" />
+      <workItem from="1594886768557" duration="18495000" />
     </task>
     <servers />
   </component>
@@ -117,5 +119,9 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="443" y="237" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.823@0.23.1440.823" timestamp="1594077698907" />
+    <state x="501" y="168" width="670" height="676" key="search.everywhere.popup" timestamp="1594912302229">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="501" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1594912302228" />
   </component>
 </project>
