@@ -8,6 +8,14 @@ class UsersController < ApplicationController
     render json: @user, status: :created
   end
 
+  def show
+    if @current_user
+      render json: @current_user, status: :ok
+    else
+      render status: :unprocessable_entity
+    end
+  end
+
   private
 
   def user_params
