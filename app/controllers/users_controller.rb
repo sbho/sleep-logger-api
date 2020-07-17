@@ -8,7 +8,15 @@ class UsersController < ApplicationController
     render json: @user, status: :created
   end
 
-  def show
+  def update
+    if @current_user.update(user_params)
+      render json: @current_user, status: :ok
+    else
+      render status: :unprocessable_entity
+    end
+  end
+
+  def get_user
     if @current_user
       render json: @current_user, status: :ok
     else
