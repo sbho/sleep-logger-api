@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def get_user
+  def profile
     if @current_user
       render json: @current_user, status: :ok
     else
