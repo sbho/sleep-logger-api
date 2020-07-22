@@ -3,13 +3,16 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_request, only: [:create]
 
   def create
-    if User.find(email: user_params[:email])
-      render json: {error: 'An user with this email already exists.'}, status: :unprocessable_entity
-    else
-      @user = User.new(user_params)
-      @user.save
-      render json: @user, status: :created
-    end
+    # if User.find(email: user_params[:email])
+    #   render json: {error: 'An user with this email already exists.'}, status: :unprocessable_entity
+    # else
+    #   @user = User.new(user_params)
+    #   @user.save
+    #   render json: @user, status: :created
+    # end
+    @user = User.new(user_params)
+    @user.save
+    render json: @user, status: :created
   end
 
   def update
